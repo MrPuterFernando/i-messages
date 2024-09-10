@@ -180,23 +180,18 @@ buton a:hover{
             <button onclick="sendMessage()"><i class="fa fa-paper-plane" aria-hidden="true"></i></button>
         </div>
     </div>
-
-
 <script>
-	// Load messages from local storage
         const chatMessages = document.getElementById('chat-messages');
         let savedMessages = JSON.parse(localStorage.getItem('chatMessages')) || [];
         savedMessages.forEach((message, index) => {
             displayMessage(message, index);
         });
- // Function to display a message
         function displayMessage(message, index) {
             const messageElement = document.createElement('div');
             messageElement.classList.add('message');
             messageElement.innerHTML = `<p><strong>You:</strong> ${message.text}</p><p class="time">${message.time}</p><button class="delete-button" onclick="deleteMessage(this, ${index})">Delete</button>`;
             chatMessages.appendChild(messageElement);
         }
- // Function to send a message
         function sendMessage() {
             const input = document.getElementById('message-input');
             const messageText = input.value.trim();
@@ -205,17 +200,13 @@ buton a:hover{
                     text: messageText,
                     time: new Date().toLocaleTimeString()
                 };
-// Display the message
                 displayMessage(message, savedMessages.length);
- // Save the message to local storage
                 savedMessages.push(message);
                 localStorage.setItem('chatMessages', JSON.stringify(savedMessages));
-// Clear the input
                 input.value = '';
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }
         }
- // Function to delete a message
         function deleteMessage(button, index) {
             savedMessages.splice(index, 1);
             localStorage.setItem('chatMessages', JSON.stringify(savedMessages));
@@ -224,8 +215,7 @@ buton a:hover{
                 displayMessage(message, index);
             });
         }
-    </script>
-	    
+    </script>	    
 </div>
 </body>
 </html>
