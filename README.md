@@ -10,7 +10,7 @@
             font-family: "Lato", sans-serif;
         }
 
-        .sidenav {
+.sidenav {
             height: 100%;
             width: 250px;
             position: fixed;
@@ -22,7 +22,7 @@
             padding-top: 20px;
         }
 
-        .sidenav a {
+ .sidenav a {
             padding: 8px 8px 8px 16px;
             text-decoration: none;
             font-size: 25px;
@@ -31,15 +31,15 @@
             transition: 0.3s;
         }
 
-        .sidenav a:hover {
+ .sidenav a:hover {
             color: #f1f1f1;
         }
 
-        .main {
+ .main {
             margin-left: 260px;
 			padding-top: 0.01px;
         }
-    </style>
+ </style>
 <style>
 .vertical-line {
   border-left: 15px solid black;
@@ -182,7 +182,7 @@ buton a:hover{
     </div>
 
 
-    <script>
+<script>
         // Load messages from local storage
         const chatMessages = document.getElementById('chat-messages');
         let savedMessages = JSON.parse(localStorage.getItem('chatMessages')) || [];
@@ -219,8 +219,7 @@ buton a:hover{
                 chatMessages.scrollTop = chatMessages.scrollHeight;
             }
         }
-
-        // Function to delete a message
+ // Function to delete a message
         function deleteMessage(button, index) {
             savedMessages.splice(index, 1);
             localStorage.setItem('chatMessages', JSON.stringify(savedMessages));
