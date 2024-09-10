@@ -159,7 +159,7 @@ buton a:hover{
 </head>
 <body>
 <div class="sidenav">
-	<h1><font color="blue"><u><font style="  border-left: 25px solid black;">MENU</u></font></h1>
+	<h1><font color="blue"><u><font style="  border-left: 25px solid black;">MENU</font></h1>
 	<p></p>
     <a href="https://mrputerfernando.github.io/i-messages/"><font color="white">Home.<i class="fa fa-home" aria-hidden="true" style="font-size:35px;color:white;"></i></a>
 	<font color="white"><div class="vertical-line"></div>
